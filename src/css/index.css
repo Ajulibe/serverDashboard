@@ -14,7 +14,8 @@ html {
 .cards {
   background-color: rgb(29, 32, 34);
   border-radius: 13px;
-  box-shadow: 0px 2px 6px -3px rgba(0, 0, 0, 0.897);
+  /* box-shadow: 0px 2px 6px -3px rgba(0, 0, 0, 0.897); */
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 .gtlogo {
@@ -40,7 +41,7 @@ html {
 
 .conImage {
   width: 10rem;
-  animation: heartBeat 4s infinite;
+  animation: heartBeat 4s;
 }
 
 .circleStyle {
@@ -85,14 +86,11 @@ html {
 
 @keyframes heartBeat {
   0% {
-    transform: scale(1);
+    transform: scale(0.5);
   }
 
-  50% {
-    transform: scale(1.05);
-  }
   100% {
-    transform: scale(1.1);
+    transform: scale(1);
   }
 }
 
