@@ -1,0 +1,165 @@
+body {
+  background-color: #14171a;
+  /* background-color: rgb(18, 18, 32); */
+  margin: 0;
+  font-family: "Poppins", "Roboto" !important;
+  color: white;
+}
+
+html {
+  /* font-size: 16px; */
+  font-size: 100% !important;
+}
+
+.cards {
+  background-color: rgb(29, 32, 34);
+  border-radius: 13px;
+  box-shadow: 0px 2px 6px -3px rgba(0, 0, 0, 0.897);
+}
+
+.gtlogo {
+  width: 5rem;
+}
+
+.header {
+  animation-name: headerMv;
+  animation-duration: 1s;
+  animation-timing-function: ease-out;
+}
+
+@keyframes headerMv {
+  0% {
+    opacity: 0;
+    transform: translateY(-10rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.conImage {
+  width: 10rem;
+  animation: heartBeat 4s infinite;
+}
+
+.circleStyle {
+  width: 10rem;
+  color: red;
+  background-color: #14171a;
+}
+
+.differentCard {
+  background-color: #14171a;
+}
+
+.redStyle {
+  animation: redblink 1s 4s infinite;
+  mask-image: url("../red.png");
+  mask-size: cover;
+}
+
+.greenStyle {
+  animation: greenblink 1s 4s infinite;
+  mask-image: url("../Group\ 23@2x.png");
+  mask-size: cover;
+}
+
+@keyframes redblink {
+  0% {
+    background-color: transparent;
+  }
+  100% {
+    background-color: rgba(162, 7, 7, 0.8);
+  }
+}
+
+@keyframes greenblink {
+  0% {
+    background-color: transparent;
+  }
+  100% {
+    background-color: rgb(85, 137, 7);
+  }
+}
+
+@keyframes heartBeat {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1.1);
+  }
+}
+
+.botn {
+  background-color: rgb(217, 79, 0);
+  border: none;
+  color: white;
+  border-radius: 5px;
+  transition: all 0.2s;
+}
+.botn:hover {
+  transform: scale(1.1);
+}
+
+.botn1 {
+  background-color: white;
+  border: none;
+  color: black;
+  border-radius: 5px;
+  transition: all 0.2s;
+}
+.botn1:hover {
+  cursor: default;
+}
+
+.internal {
+  animation: internalAn 3s 1s;
+}
+
+@keyframes internalAn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 100;
+  }
+}
+
+.alitbtn {
+  box-shadow: 0px 2px 6px -3px rgba(0, 0, 0, 0.897);
+}
+
+.botn3 {
+  background-color: red;
+  width: 2rem;
+  height: 1rem;
+  border: none;
+  clip-path: circle(50%);
+  animation: redblink2 0.5s 4s infinite;
+}
+
+@keyframes redblink2 {
+  0% {
+    background-color: transparent;
+  }
+  50% {
+    background-color: rgba(180, 10, 10, 0.8);
+  }
+  100% {
+    background-color: rgba(225, 0, 0, 0.8);
+  }
+}
+
+.botn4 {
+  background-color: rgb(93, 175, 13);
+  width: 2rem;
+  height: 1rem;
+  border: none;
+  clip-path: circle(50%);
+}
