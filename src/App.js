@@ -1,10 +1,29 @@
-import React from "react";
+import React, { useState } from "react";
 import "./App.css";
 import GtLogo from "./GtLogo.svg";
 import icon from "./Group 1.png";
 import icon2 from "./red.png";
 import icon3 from "./Group 23@2x.png";
+import io from "socket.io-client";
+
 function App() {
+  //one color for each server
+  const [color, setColor] = useState("botn4");
+
+  const Botify = io("https://shopwyse-backend.herokuapp.com");
+
+  //CONNECTED
+  Botify.on("connect", function () {
+    console.log("connected");
+    setColor("botn4");
+  });
+
+  //DISCONNECTED
+  Botify.on("disconnect", function () {
+    console.log("disconnected");
+    setColor("botn3");
+  });
+
   return (
     <div className="App">
       <div class="container">
@@ -33,10 +52,7 @@ function App() {
           <div class="col-10 mt-3 mt-md-0 col-md-6 ">
             <div className="row">
               <div className="col-12">
-                <div
-                  class="card cards"
-                  style={{ backgroundColor: "rgb(217,79,0)" }}
-                >
+                <div class="card cards mainAdmin">
                   <div class="card-body d-flex justify-content-between">
                     <span
                       class=""
@@ -66,7 +82,7 @@ function App() {
             style={{}}
           >
             <div
-              class="card cards d-flex justify-content-center w-100"
+              class="card cardsBlack d-flex justify-content-center w-100"
               style={{}}
             >
               <div class="card-body">
@@ -97,7 +113,10 @@ function App() {
                           >
                             <span>Go Live Form(10.1.0.62)</span>
                             <span class="d-flex align-items-center">
-                              <button class="botn3 mr-2"></button>
+                              <button
+                                class={color}
+                                style={{ marginRight: "0.7rem" }}
+                              ></button>
                               <button
                                 class="botn"
                                 style={{
@@ -127,7 +146,10 @@ function App() {
                             <span>Surge & GT Community &nbsp;(10.1.0.62)</span>
 
                             <span class="d-flex align-items-center">
-                              <button class="botn3 mr-2"></button>
+                              <button
+                                class={color}
+                                style={{ marginRight: "0.7rem" }}
+                              ></button>
                               <button
                                 class="botn"
                                 style={{
@@ -156,7 +178,10 @@ function App() {
                           >
                             <span>Gateway Server &nbsp;(10.1.0.62)</span>
                             <span class="d-flex align-items-center">
-                              <button class="botn3 mr-2"></button>
+                              <button
+                                class={color}
+                                style={{ marginRight: "0.7rem" }}
+                              ></button>
                               <button
                                 class="botn"
                                 style={{
@@ -186,7 +211,10 @@ function App() {
                             <span>GT Assistant &nbsp;(10.1.0.62)</span>
 
                             <span class="d-flex align-items-center">
-                              <button class="botn4 mr-2"></button>
+                              <button
+                                class={color}
+                                style={{ marginRight: "0.7rem" }}
+                              ></button>
                               <button
                                 class="botn"
                                 style={{
@@ -216,7 +244,10 @@ function App() {
                             {" "}
                             <span> Type of Mail</span>
                             <span class="d-flex align-items-center">
-                              <button class="botn4 mr-2"></button>
+                              <button
+                                class={color}
+                                style={{ marginRight: "0.7rem" }}
+                              ></button>
                               <button
                                 class="botn"
                                 style={{

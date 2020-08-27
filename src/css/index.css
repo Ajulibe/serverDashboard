@@ -13,9 +13,16 @@ html {
 
 .cards {
   background-color: rgb(29, 32, 34);
-  border-radius: 13px;
+  border-radius: 3px;
   /* box-shadow: 0px 2px 6px -3px rgba(0, 0, 0, 0.897); */
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.cardsBlack {
+  background-color: rgb(29, 32, 34);
+  border-radius: 3px;
+  /* box-shadow: 0px 2px 6px -3px rgba(0, 0, 0, 0.897); */
+  box-shadow: 4px 4px 8px 2px rgba(0, 0, 0, 0.1);
 }
 
 .gtlogo {
@@ -95,11 +102,16 @@ html {
 }
 
 .botn {
-  background-color: rgb(217, 79, 0);
+  background: linear-gradient(
+    to right bottom,
+    rgb(255, 117, 37),
+    rgb(217, 79, 0)
+  );
   border: none;
   color: white;
-  border-radius: 5px;
+  border-radius: 0;
   transition: all 0.2s;
+  font-size: 0.6rem;
 }
 .botn:hover {
   transform: scale(1.1);
@@ -135,10 +147,10 @@ html {
 
 .botn3 {
   background-color: red;
-  width: 2rem;
+  width: 1rem;
   height: 1rem;
   border: none;
-  clip-path: circle(50%);
+  border-radius: 1rem;
   animation: redblink2 0.5s 4s infinite;
 }
 
@@ -155,9 +167,17 @@ html {
 }
 
 .botn4 {
-  background-color: rgb(93, 175, 13);
-  width: 2rem;
+  background: linear-gradient(to bottom, rgb(69, 132, 6), rgb(127, 248, 5));
+  width: 1rem;
   height: 1rem;
   border: none;
-  clip-path: circle(50%);
+  border-radius: 1rem;
+}
+
+.mainAdmin {
+  background: linear-gradient(
+    to right bottom,
+    rgb(250, 98, 10),
+    rgb(217, 79, 0)
+  );
 }
