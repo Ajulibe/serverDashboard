@@ -173,6 +173,13 @@ html {
   border: none;
   border-radius: 1rem;
 }
+.botn5 {
+  background: linear-gradient(to bottom, rgb(251, 255, 0), rgb(224, 248, 11));
+  width: 1rem;
+  height: 1rem;
+  border: none;
+  border-radius: 1rem;
+}
 
 .mainAdmin {
   background: linear-gradient(
@@ -180,4 +187,82 @@ html {
     rgb(250, 98, 10),
     rgb(217, 79, 0)
   );
+}
+
+.transNum {
+  z-index: 200;
+  color: rgba(225, 0, 0, 0.8);
+  transform: translate(-50%, -50%);
+  position: absolute;
+  top: 43%;
+  left: 50%;
+}
+
+.transNum2 {
+  z-index: 200;
+  color: rgb(112, 186, 38);
+  transform: translate(-50%, -50%);
+  position: absolute;
+  top: 43%;
+  left: 50%;
+}
+
+/* //MEDIA QUERIES */
+
+@media screen and (max-width: 375px) {
+  .header {
+    font-size: 80%;
+  }
+  .gtlogo {
+    width: 3rem;
+    height: 3rem;
+  }
+
+  body {
+    margin-top: 1rem;
+  }
+  .internal {
+    font-size: 0.7rem !important;
+  }
+
+  .adminStyle {
+    font-size: 1rem !important;
+  }
+  .stayup {
+    font-size: 0.5rem !important;
+  }
+  .conImage {
+    width: 7rem;
+  }
+  .circleStyle {
+    width: 6rem;
+  }
+  .transNum2 {
+    font-size: 1rem !important;
+  }
+  .transNum {
+    font-size: 1rem !important;
+  }
+  .allservers {
+    font-size: 0.8rem !important;
+  }
+  .alitbtn {
+    font-size: 0.6rem !important;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .conImage {
+    width: 5rem;
+    height: 3rem;
+  }
+  .circleStyle {
+    width: 4rem;
+  }
+  .transNum2 {
+    font-size: 0.9rem !important;
+  }
+  .transNum {
+    font-size: 0.9rem !important;
+  }
 }

@@ -8,7 +8,11 @@ import io from "socket.io-client";
 
 function App() {
   //one color for each server
-  const [color, setColor] = useState("botn4");
+  const [color, setColor] = useState("botn5");
+  const [working, setWorking] = useState(0);
+  const [down, setDown] = useState(0);
+  const [botOnState, setBotOnState] = useState(false);
+  const [botDownState, setBotDownState] = useState(false);
 
   const Botify = io("https://shopwyse-backend.herokuapp.com");
 
@@ -16,12 +20,40 @@ function App() {
   Botify.on("connect", function () {
     console.log("connected");
     setColor("botn4");
+    if (!botOnState) {
+      setBotOnState(true);
+      setBotDownState(false);
+      setWorking(working + 1);
+      document.getElementById("greenID").classList.add("greenStyle");
+      document.getElementById("redID").classList.remove("redStyle");
+      if (down == 0) {
+        return null;
+      } else {
+        setDown(down - 1);
+      }
+    } else {
+      return null;
+    }
   });
 
   //DISCONNECTED
   Botify.on("disconnect", function () {
     console.log("disconnected");
     setColor("botn3");
+    if (!botDownState) {
+      setBotDownState(true);
+      setBotOnState(false);
+      setDown(down + 1);
+      document.getElementById("redID").classList.add("redStyle");
+      document.getElementById("redID").classList.remove("greenStyle");
+      if (working == 0) {
+        return null;
+      } else {
+        setWorking(working - 1);
+      }
+    } else {
+      return null;
+    }
   });
 
   return (
@@ -55,11 +87,14 @@ function App() {
                 <div class="card cards mainAdmin">
                   <div class="card-body d-flex justify-content-between">
                     <span
-                      class=""
+                      class="adminStyle"
                       style={{ fontSize: "2rem", textAlign: "left" }}
                     >
                       Hi Admin.
-                      <p style={{ fontSize: "0.6rem", fontWeight: "100" }}>
+                      <p
+                        style={{ fontSize: "0.6rem", fontWeight: "100" }}
+                        class="stayup"
+                      >
                         Stay up-to-date with the state of our Internal Servers
                       </p>
                     </span>
@@ -70,10 +105,18 @@ function App() {
             </div>
             <div className="row mt-3 d-flex justify-content-around">
               <div className="col-5">
-                <img src={icon2} alt="icon2" class="circleStyle redStyle" />
+                <h2 class="transNum">{down}</h2>
+                <img
+                  id="redID"
+                  src={icon2}
+                  alt="icon2"
+                  class="circleStyle"
+                  style={{ position: "relative" }}
+                />
               </div>
               <div className="col-5">
-                <img src={icon3} alt="icon3" class="circleStyle greenStyle" />
+                <h2 class="transNum2">{working}</h2>
+                <img id="greenID" src={icon3} alt="icon3" class="circleStyle" />
               </div>
             </div>
           </div>
@@ -86,7 +129,7 @@ function App() {
               style={{}}
             >
               <div class="card-body">
-                <h5 class="card-title">All Servers</h5>
+                <h5 class="card-title allservers">All Servers</h5>
                 <div
                   className="col-12 col-md-12 table-responsive-md d-flex justify-content-between"
                   style={{
@@ -111,7 +154,9 @@ function App() {
                               fontWeight: "100",
                             }}
                           >
-                            <span>Go Live Form(10.1.0.62)</span>
+                            <span style={{ textAlign: "left" }}>
+                              Go Live Form(10.1.0.62)
+                            </span>
                             <span class="d-flex align-items-center">
                               <button
                                 class={color}
@@ -143,7 +188,9 @@ function App() {
                               fontWeight: "100",
                             }}
                           >
-                            <span>Surge & GT Community &nbsp;(10.1.0.62)</span>
+                            <span style={{ textAlign: "left" }}>
+                              Surge & GT Community &nbsp;(10.1.0.62)
+                            </span>
 
                             <span class="d-flex align-items-center">
                               <button
@@ -176,7 +223,9 @@ function App() {
                               fontWeight: "100",
                             }}
                           >
-                            <span>Gateway Server &nbsp;(10.1.0.62)</span>
+                            <span style={{ textAlign: "left" }}>
+                              Gateway Server &nbsp;(10.1.0.62)
+                            </span>
                             <span class="d-flex align-items-center">
                               <button
                                 class={color}
@@ -208,7 +257,9 @@ function App() {
                               fontWeight: "100",
                             }}
                           >
-                            <span>GT Assistant &nbsp;(10.1.0.62)</span>
+                            <span style={{ textAlign: "left" }}>
+                              GT Assistant &nbsp;(10.1.0.62)
+                            </span>
 
                             <span class="d-flex align-items-center">
                               <button
@@ -242,7 +293,10 @@ function App() {
                             }}
                           >
                             {" "}
-                            <span> Type of Mail</span>
+                            <span style={{ textAlign: "left" }}>
+                              {" "}
+                              Type of Mail
+                            </span>
                             <span class="d-flex align-items-center">
                               <button
                                 class={color}
