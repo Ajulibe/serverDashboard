@@ -383,7 +383,7 @@ html {
 }
 
 /* LANDSCAPE MODE */
-@media screen and (min-width: 812px) and (max-width: 823px) and (orientation: landscape) {
+@media screen and (min-width: 769px) and (max-width: 991px) and (orientation: landscape) {
   .header {
     font-size: 80%;
   }
