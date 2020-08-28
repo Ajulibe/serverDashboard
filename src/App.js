@@ -45,7 +45,7 @@ function App() {
       setBotOnState(false);
       setDown(down + 1);
       document.getElementById("redID").classList.add("redStyle");
-      document.getElementById("redID").classList.remove("greenStyle");
+      document.getElementById("greenID").classList.remove("greenStyle");
       if (working == 0) {
         return null;
       } else {
@@ -80,7 +80,7 @@ function App() {
           </div>
         </div>
 
-        <div class="row d-flex justify-content-center mt-md-5">
+        <div class="row d-flex justify-content-center mt-md-5 changedr">
           <div class="col-10 mt-3 mt-md-0 col-md-6 ">
             <div className="row">
               <div className="col-12">
@@ -155,7 +155,8 @@ function App() {
                             }}
                           >
                             <span style={{ textAlign: "left" }}>
-                              Go Live Form(10.1.0.62)
+                              Go Live Form{" "}
+                              <span class="ipadd">(10.1.0.62)</span>
                             </span>
                             <span class="d-flex align-items-center">
                               <button
@@ -168,7 +169,7 @@ function App() {
                                   fontWeight: "100",
                                 }}
                               >
-                                Send Mail
+                                <span class="sendadd">Send</span> Mail
                               </button>
                             </span>
                           </button>
@@ -189,7 +190,8 @@ function App() {
                             }}
                           >
                             <span style={{ textAlign: "left" }}>
-                              Surge & GT Community &nbsp;(10.1.0.62)
+                              Surge
+                              <span class="ipadd">(10.1.0.62)</span>
                             </span>
 
                             <span class="d-flex align-items-center">
@@ -203,7 +205,7 @@ function App() {
                                   fontWeight: "100",
                                 }}
                               >
-                                Send Mail
+                                <span class="sendadd">Send</span> Mail
                               </button>
                             </span>
                           </button>
@@ -224,7 +226,8 @@ function App() {
                             }}
                           >
                             <span style={{ textAlign: "left" }}>
-                              Gateway Server &nbsp;(10.1.0.62)
+                              Gateway Server{" "}
+                              <span class="ipadd">(10.1.0.62)</span>
                             </span>
                             <span class="d-flex align-items-center">
                               <button
@@ -237,7 +240,7 @@ function App() {
                                   fontWeight: "100",
                                 }}
                               >
-                                Send Mail
+                                <span class="sendadd">Send</span> Mail
                               </button>
                             </span>
                           </button>
@@ -258,7 +261,8 @@ function App() {
                             }}
                           >
                             <span style={{ textAlign: "left" }}>
-                              GT Assistant &nbsp;(10.1.0.62)
+                              GT Assistant{" "}
+                              <span class="ipadd">(10.1.0.62)</span>
                             </span>
 
                             <span class="d-flex align-items-center">
@@ -272,7 +276,7 @@ function App() {
                                   fontWeight: "100",
                                 }}
                               >
-                                Send Mail
+                                <span class="sendadd">Send</span> Mail
                               </button>
                             </span>
                           </button>
@@ -283,7 +287,7 @@ function App() {
                       <tr>
                         <td>
                           <button
-                            className="btn btn-sm d-flex justify-content-between alitbtn"
+                            className="btn btn-sm d-flex justify-content-between alitbtn lastone"
                             style={{
                               fontSize: "0.8rem",
                               backgroundColor: "#14171a",
@@ -292,10 +296,9 @@ function App() {
                               fontWeight: "100",
                             }}
                           >
-                            {" "}
                             <span style={{ textAlign: "left" }}>
-                              {" "}
-                              Type of Mail
+                              GT Community{" "}
+                              <span class="ipadd">(10.1.0.62)</span>
                             </span>
                             <span class="d-flex align-items-center">
                               <button
@@ -308,7 +311,7 @@ function App() {
                                   fontWeight: "100",
                                 }}
                               >
-                                Send Mail
+                                <span class="sendadd">Send</span> Mail
                               </button>
                             </span>
                           </button>
