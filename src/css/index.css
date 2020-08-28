@@ -381,3 +381,51 @@ html {
     font-size: 0.6rem !important;
   }
 }
+
+/* LANDSCAPE MODE */
+@media screen and (min-width: 812px) and (orientation: landscape) {
+  .header {
+    font-size: 80%;
+  }
+  .gtlogo {
+    width: 3rem;
+    height: 3rem;
+  }
+
+  body {
+    margin-top: 1rem;
+  }
+  .internal {
+    font-size: 0.7rem !important;
+  }
+
+  .adminStyle {
+    font-size: 1rem !important;
+  }
+  .stayup {
+    font-size: 0.5rem !important;
+  }
+  .conImage {
+    width: 7rem;
+  }
+  .circleStyle {
+    width: 6rem;
+  }
+  .transNum2 {
+    font-size: 1rem !important;
+  }
+  .transNum {
+    font-size: 1rem !important;
+  }
+  .allservers {
+    font-size: 0.8rem !important;
+  }
+  .alitbtn {
+    font-size: 0.5rem !important;
+  }
+  .ipadd {
+    display: none;
+  }
+  .botn {
+  }
+}
