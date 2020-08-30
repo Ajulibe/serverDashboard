@@ -18,7 +18,7 @@ function App() {
 
   //CONNECTED
   Botify.on("connect", function () {
-    console.log("connected");
+    // console.log("connected");
     setColor("botn4");
     if (!botOnState) {
       setBotOnState(true);
@@ -26,7 +26,7 @@ function App() {
       setWorking(working + 1);
       document.getElementById("greenID").classList.add("greenStyle");
       document.getElementById("redID").classList.remove("redStyle");
-      if (down == 0) {
+      if (down === 0) {
         return null;
       } else {
         setDown(down - 1);
@@ -38,7 +38,7 @@ function App() {
 
   //DISCONNECTED
   Botify.on("disconnect", function () {
-    console.log("disconnected");
+    // console.log("disconnected");
     setColor("botn3");
     if (!botDownState) {
       setBotDownState(true);
@@ -46,7 +46,7 @@ function App() {
       setDown(down + 1);
       document.getElementById("redID").classList.add("redStyle");
       document.getElementById("greenID").classList.remove("greenStyle");
-      if (working == 0) {
+      if (working === 0) {
         return null;
       } else {
         setWorking(working - 1);
@@ -58,78 +58,83 @@ function App() {
 
   return (
     <div className="App">
-      <div class="container">
+      <div className="container">
         <div className="row d-flex no=gutters" style={{ marginTop: "1%" }}>
           <div className="col-md-4" style={{ textAlign: "center" }}></div>
           <div
             className="col-10 pl-5 pl-md-0 col-md-4"
             style={{ textAlign: "center" }}
           >
-            <p class="header" style={{}}>
+            <p className="header" style={{}}>
               <b>Fintech & Innovation Division</b>
             </p>
             <p
-              class="internal"
+              className="internal"
               style={{ fontSize: "0.9rem", fontWeight: "100" }}
             >
               Internal Server Dashboard
             </p>
           </div>
           <div className="col-2 col-md-4 d-flex justify-content-end">
-            <img src={GtLogo} alt="gtlogo" class="gtlogo" />
+            <img src={GtLogo} alt="gtlogo" className="gtlogo" />
           </div>
         </div>
 
-        <div class="row d-flex justify-content-center mt-md-5 changedr">
-          <div class="col-10 mt-3 mt-md-0 col-md-6 ">
+        <div className="row d-flex justify-content-center mt-md-5 changedr">
+          <div className="col-10 mt-3 mt-md-0 col-md-6 ">
             <div className="row">
               <div className="col-12">
-                <div class="card cards mainAdmin">
-                  <div class="card-body d-flex justify-content-between">
+                <div className="card cards mainAdmin">
+                  <div className="card-body d-flex justify-content-between">
                     <span
-                      class="adminStyle"
+                      className="adminStyle"
                       style={{ fontSize: "2rem", textAlign: "left" }}
                     >
                       Hi Admin.
                       <p
                         style={{ fontSize: "0.6rem", fontWeight: "100" }}
-                        class="stayup"
+                        className="stayup"
                       >
                         Stay up-to-date with the state of our Internal Servers
                       </p>
                     </span>
-                    <img src={icon} alt="icon" class="conImage" />
+                    <img src={icon} alt="icon" className="conImage" />
                   </div>
                 </div>
               </div>
             </div>
             <div className="row mt-3 d-flex justify-content-around">
               <div className="col-5">
-                <h2 class="transNum">{down}</h2>
+                <h2 className="transNum">{down}</h2>
                 <img
                   id="redID"
                   src={icon2}
                   alt="icon2"
-                  class="circleStyle"
+                  className="circleStyle"
                   style={{ position: "relative" }}
                 />
               </div>
               <div className="col-5">
-                <h2 class="transNum2">{working}</h2>
-                <img id="greenID" src={icon3} alt="icon3" class="circleStyle" />
+                <h2 className="transNum2">{working}</h2>
+                <img
+                  id="greenID"
+                  src={icon3}
+                  alt="icon3"
+                  className="circleStyle"
+                />
               </div>
             </div>
           </div>
           <div
-            class="col-10 mt-3 mt-md-0 col-md-6 d-flex align-items-stretch "
+            className="col-10 mt-3 mt-md-0 col-md-6 d-flex align-items-stretch "
             style={{}}
           >
             <div
-              class="card cardsBlack d-flex justify-content-center w-100"
+              className="card cardsBlack d-flex justify-content-center w-100"
               style={{}}
             >
-              <div class="card-body">
-                <h5 class="card-title allservers">All Servers</h5>
+              <div className="card-body">
+                <h5 className="card-title allservers">All Servers</h5>
                 <div
                   className="col-12 col-md-12 table-responsive-md d-flex justify-content-between"
                   style={{
@@ -156,20 +161,20 @@ function App() {
                           >
                             <span style={{ textAlign: "left" }}>
                               Go Live Form{" "}
-                              <span class="ipadd">(10.1.0.62)</span>
+                              <span className="ipadd">(10.1.0.62)</span>
                             </span>
-                            <span class="d-flex align-items-center">
+                            <span className="d-flex align-items-center">
                               <button
-                                class={color}
+                                className={color}
                                 style={{ marginRight: "0.7rem" }}
                               ></button>
                               <button
-                                class="botn"
+                                className="botn"
                                 style={{
                                   fontWeight: "100",
                                 }}
                               >
-                                <span class="sendadd">Send</span> Mail
+                                <span className="sendadd">Send</span> Mail
                               </button>
                             </span>
                           </button>
@@ -191,21 +196,21 @@ function App() {
                           >
                             <span style={{ textAlign: "left" }}>
                               Surge
-                              <span class="ipadd">(10.1.0.62)</span>
+                              <span className="ipadd">(10.1.0.62)</span>
                             </span>
 
-                            <span class="d-flex align-items-center">
+                            <span className="d-flex align-items-center">
                               <button
-                                class={color}
+                                className={color}
                                 style={{ marginRight: "0.7rem" }}
                               ></button>
                               <button
-                                class="botn"
+                                className="botn"
                                 style={{
                                   fontWeight: "100",
                                 }}
                               >
-                                <span class="sendadd">Send</span> Mail
+                                <span className="sendadd">Send</span> Mail
                               </button>
                             </span>
                           </button>
@@ -227,20 +232,20 @@ function App() {
                           >
                             <span style={{ textAlign: "left" }}>
                               Gateway Server{" "}
-                              <span class="ipadd">(10.1.0.62)</span>
+                              <span className="ipadd">(10.1.0.62)</span>
                             </span>
-                            <span class="d-flex align-items-center">
+                            <span className="d-flex align-items-center">
                               <button
-                                class={color}
+                                className={color}
                                 style={{ marginRight: "0.7rem" }}
                               ></button>
                               <button
-                                class="botn"
+                                className="botn"
                                 style={{
                                   fontWeight: "100",
                                 }}
                               >
-                                <span class="sendadd">Send</span> Mail
+                                <span className="sendadd">Send</span> Mail
                               </button>
                             </span>
                           </button>
@@ -262,21 +267,21 @@ function App() {
                           >
                             <span style={{ textAlign: "left" }}>
                               GT Assistant{" "}
-                              <span class="ipadd">(10.1.0.62)</span>
+                              <span className="ipadd">(10.1.0.62)</span>
                             </span>
 
-                            <span class="d-flex align-items-center">
+                            <span className="d-flex align-items-center">
                               <button
-                                class={color}
+                                className={color}
                                 style={{ marginRight: "0.7rem" }}
                               ></button>
                               <button
-                                class="botn"
+                                className="botn"
                                 style={{
                                   fontWeight: "100",
                                 }}
                               >
-                                <span class="sendadd">Send</span> Mail
+                                <span className="sendadd">Send</span> Mail
                               </button>
                             </span>
                           </button>
@@ -298,20 +303,20 @@ function App() {
                           >
                             <span style={{ textAlign: "left" }}>
                               GT Community{" "}
-                              <span class="ipadd">(10.1.0.62)</span>
+                              <span className="ipadd">(10.1.0.62)</span>
                             </span>
-                            <span class="d-flex align-items-center">
+                            <span className="d-flex align-items-center">
                               <button
-                                class={color}
+                                className={color}
                                 style={{ marginRight: "0.7rem" }}
                               ></button>
                               <button
-                                class="botn"
+                                className="botn"
                                 style={{
                                   fontWeight: "100",
                                 }}
                               >
-                                <span class="sendadd">Send</span> Mail
+                                <span className="sendadd">Send</span> Mail
                               </button>
                             </span>
                           </button>
