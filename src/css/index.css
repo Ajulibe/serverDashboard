@@ -232,7 +232,7 @@ html {
     font-size: 0.5rem !important;
   }
   .conImage {
-    width: 7rem;
+    max-width: 7rem;
   }
   .circleStyle {
     width: 6rem;
@@ -267,7 +267,7 @@ html {
   }
 
   .conImage {
-    width: 5rem;
+    max-width: 5rem;
     height: 3rem;
   }
   .circleStyle {
@@ -328,8 +328,6 @@ html {
   }
   .conImage {
     max-width: 7rem;
-    height: 4rem !important;
-    background-size: cover;
   }
   .circleStyle {
     width: 6rem;
@@ -376,7 +374,7 @@ html {
     font-size: 0.4rem !important;
   }
   .conImage {
-    width: 5rem;
+    max-width: 5rem;
   }
 
   .allservers {
@@ -408,7 +406,7 @@ html {
     font-size: 0.5rem !important;
   }
   .conImage {
-    width: 7rem;
+    max-width: 7rem;
   }
   .circleStyle {
     width: 6rem;
