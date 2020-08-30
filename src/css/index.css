@@ -209,7 +209,7 @@ html {
 
 /* //MEDIA QUERIES */
 
-@media screen and (max-width: 375px) {
+@media only screen and (max-width: 375px) {
   .header {
     font-size: 80%;
   }
@@ -260,7 +260,7 @@ html {
   }
 }
 
-@media screen and (max-width: 320px) {
+@media only screen and (max-width: 320px) {
   .gtlogo {
     width: 2.5rem !important;
     height: 2.5rem !important;
@@ -304,7 +304,7 @@ html {
   }
 }
 
-@media screen and (max-width: 768px) {
+@media only screen and (max-width: 768px) {
   .header {
     font-size: 80%;
   }
@@ -327,7 +327,9 @@ html {
     font-size: 0.5rem !important;
   }
   .conImage {
-    width: 7rem;
+    max-width: 7rem;
+    height: 4rem !important;
+    background-size: cover;
   }
   .circleStyle {
     width: 6rem;
@@ -351,7 +353,7 @@ html {
   }
 }
 
-@media screen and (max-width: 280px) {
+@media only screen and (max-width: 280px) {
   .header {
     font-size: 60%;
   }
@@ -383,7 +385,7 @@ html {
 }
 
 /* LANDSCAPE MODE */
-@media screen and (min-width: 769px) and (max-width: 991px) and (orientation: landscape) {
+@media only screen and (min-width: 769px) and (max-width: 991px) and (orientation: landscape) {
   .header {
     font-size: 80%;
   }
@@ -425,7 +427,5 @@ html {
   }
   .ipadd {
     display: none;
-  }
-  .botn {
   }
 }
