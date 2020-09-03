@@ -19,41 +19,45 @@ function App() {
   //CONNECTED
   Botify.on("connect", function () {
     // console.log("connected");
-    setColor("botn4");
-    if (!botOnState) {
-      setBotOnState(true);
-      setBotDownState(false);
-      setWorking(working + 1);
-      document.getElementById("greenID").classList.add("greenStyle");
-      document.getElementById("redID").classList.remove("redStyle");
-      if (down === 0) {
-        return null;
+    try {
+      setColor("botn4");
+      if (!botOnState) {
+        setBotOnState(true);
+        setBotDownState(false);
+        setWorking(working + 1);
+        document.getElementById("greenID").classList.add("greenStyle");
+        document.getElementById("redID").classList.remove("redStyle");
+        if (down === 0) {
+          return null;
+        } else {
+          setDown(down - 1);
+        }
       } else {
-        setDown(down - 1);
+        return null;
       }
-    } else {
-      return null;
-    }
+    } catch (e) {}
   });
 
   //DISCONNECTED
   Botify.on("disconnect", function () {
     // console.log("disconnected");
-    setColor("botn3");
-    if (!botDownState) {
-      setBotDownState(true);
-      setBotOnState(false);
-      setDown(down + 1);
-      document.getElementById("redID").classList.add("redStyle");
-      document.getElementById("greenID").classList.remove("greenStyle");
-      if (working === 0) {
-        return null;
+    try {
+      setColor("botn3");
+      if (!botDownState) {
+        setBotDownState(true);
+        setBotOnState(false);
+        setDown(down + 1);
+        document.getElementById("redID").classList.add("redStyle");
+        document.getElementById("greenID").classList.remove("greenStyle");
+        if (working === 0) {
+          return null;
+        } else {
+          setWorking(working - 1);
+        }
       } else {
-        setWorking(working - 1);
+        return null;
       }
-    } else {
-      return null;
-    }
+    } catch (e) {}
   });
 
   return (
