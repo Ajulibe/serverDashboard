@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect, useCallback } from "react";
 import "./App.css";
 import GtLogo from "./GtLogo.svg";
 import icon from "./Group 1.png";
@@ -14,51 +14,64 @@ function App() {
   const [botOnState, setBotOnState] = useState(false);
   const [botDownState, setBotDownState] = useState(false);
 
-  const Botify = io("https://shopwyse-backend.herokuapp.com");
+  // const working = localStorage.getItem("Working");
+  // const down = localStorage.getItem("Down");
 
-  //CONNECTED
-  Botify.on("connect", function () {
-    // console.log("connected");
-    try {
-      setColor("botn4");
-      if (!botOnState) {
-        setBotOnState(true);
-        setBotDownState(false);
-        setWorking(working + 1);
-        document.getElementById("greenID").classList.add("greenStyle");
-        document.getElementById("redID").classList.remove("redStyle");
-        if (down === 0) {
-          return null;
-        } else {
-          setDown(down - 1);
-        }
-      } else {
-        return null;
-      }
-    } catch (e) {}
-  });
+  //always uss a callback whenever you are going to be calling a funtion in
+  //useEffect
 
-  //DISCONNECTED
-  Botify.on("disconnect", function () {
-    // console.log("disconnected");
-    try {
-      setColor("botn3");
-      if (!botDownState) {
-        setBotDownState(true);
-        setBotOnState(false);
-        setDown(down + 1);
-        document.getElementById("redID").classList.add("redStyle");
-        document.getElementById("greenID").classList.remove("greenStyle");
-        if (working === 0) {
-          return null;
+  const Servers = useCallback(() => {
+    //connection function
+    const Botify = io("https://shopwyse-backend.herokuapp.com");
+
+    //CONNECTED
+    Botify.on("connect", async () => {
+      // console.log("connected");
+      try {
+        setColor("botn4");
+        if (!botOnState) {
+          setBotOnState(true);
+          setBotDownState(false);
+          setWorking(1);
+
+          document.getElementById("greenID").classList.add("greenStyle");
+          document.getElementById("redID").classList.remove("redStyle");
+
+          setDown(0);
         } else {
-          setWorking(working - 1);
+          return null;
         }
-      } else {
-        return null;
-      }
-    } catch (e) {}
-  });
+      } catch (e) {}
+    });
+
+    //DISCONNECTED
+    Botify.on("disconnect", async () => {
+      // console.log("disconnected");
+      try {
+        setColor("botn3");
+        if (!botDownState) {
+          setBotDownState(true);
+          setBotOnState(false);
+          setDown(1);
+
+          document.getElementById("redID").classList.add("redStyle");
+          document.getElementById("greenID").classList.remove("greenStyle");
+
+          setWorking(0);
+        } else {
+          return null;
+        }
+      } catch (e) {}
+    });
+  }, [botDownState, botOnState]);
+
+  useEffect(() => {
+    if (window.navigator.onLine) {
+      Servers();
+    } else {
+      return;
+    }
+  }, [Servers]);
 
   return (
     <div className="App">
