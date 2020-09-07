@@ -66,11 +66,7 @@ function App() {
   }, [botDownState, botOnState]);
 
   useEffect(() => {
-    if (window.navigator.onLine) {
-      Servers();
-    } else {
-      return;
-    }
+    Servers();
   }, [Servers]);
 
   return (
