@@ -2,12 +2,27 @@ import React from "react";
 import ReactDOM from "react-dom";
 import "../src/css/index.css";
 import App from "./App";
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Redirect,
+} from "react-router-dom";
 import * as serviceWorker from "./serviceWorker";
+import Logs from "./components/Logs";
 
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+  <Router>
+    <Switch>
+      <Route exact path="/dashboard">
+        <App />
+      </Route>
+      <Route exact path="/view-logs">
+        <Logs />
+      </Route>
+      <Redirect to="/dashboard" />
+    </Switch>
+  </Router>,
   document.getElementById("root")
 );
 

@@ -5,6 +5,7 @@ import icon from "./Group 1.png";
 import icon2 from "./red.png";
 import icon3 from "./Group 23@2x.png";
 import io from "socket.io-client";
+import { Link } from "react-router-dom";
 
 function App() {
   //one color for each server
@@ -87,6 +88,18 @@ function App() {
             >
               Internal Server Dashboard
             </p>
+            <Link to="/view-logs">
+              <button
+                className="botn"
+                style={{
+                  fontWeight: "100",
+                }}
+              >
+                <span className="sendadd">
+                  View Logs &nbsp; <i class="fa fa-cogs" aria-hidden="true"></i>
+                </span>
+              </button>
+            </Link>
           </div>
           <div className="col-2 col-md-4 d-flex justify-content-end">
             <img src={GtLogo} alt="gtlogo" className="gtlogo" />
