@@ -11,6 +11,7 @@ import {
   CartesianGrid,
   Tooltip,
   Legend,
+  Label,
 } from "recharts";
 
 const Logs = () => {
@@ -298,11 +299,12 @@ const Logs = () => {
 
                 <YAxis
                   label={{
-                    value: "No. of times down",
+                    value: "Number of Times Down",
                     angle: -90,
-                    position: "insideLeft",
+                    position: "insideBottomLeft",
                     fill: "white",
                     fontSize: 10,
+                    offset: 13,
                   }}
                 />
                 <Tooltip />
@@ -316,7 +318,7 @@ const Logs = () => {
 
                 <Bar dataKey="GTAssistant" fill="#F47560" />
 
-                <Bar dataKey="GTCommunity" fill="#CCBF4D" />
+                <Bar dataKey="GTCommunity" fill="rgb(251, 255, 0)" />
 
                 <Bar dataKey="TestWrapper" fill="#61CDBB" />
                 <Bar dataKey="LiveWrapper" fill="#E8A838" />

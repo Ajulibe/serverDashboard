@@ -520,7 +520,7 @@ html {
 
 .iconAnm {
   transition: all 0.3s;
-  animation: iconAnm 20s 4s infinite;
+  animation: iconAnm 20s 0.4s infinite;
 }
 
 /* @keyframes iconAnm {
@@ -574,10 +574,9 @@ html {
   font-size: 0.7rem;
 }
 
-@media only screen and (min-width: 1024px) {
+@media only screen and (min-width: 1367px) {
   .changedr {
     margin-top: 12% !important;
-    /* border: 1px solid white; */
   }
   .headBoy {
     margin-top: 7% !important;
