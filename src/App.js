@@ -73,7 +73,10 @@ function App() {
   return (
     <div className="App">
       <div className="container">
-        <div className="row d-flex no=gutters" style={{ marginTop: "1%" }}>
+        <div
+          className="row d-flex no=gutters headBoy"
+          style={{ marginTop: "1%" }}
+        >
           <div className="col-md-4" style={{ textAlign: "center" }}></div>
           <div
             className="col-10 pl-5 pl-md-0 col-md-4"

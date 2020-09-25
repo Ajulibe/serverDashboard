@@ -138,7 +138,7 @@ const Logs = () => {
   };
 
   const addClassFn = () => {
-    console.log();
+    console.log("clicked!!");
     const element = addBtn.current;
     const btn1 = firstBtn.current;
     const btn2 = secondBtn.current;
@@ -328,7 +328,6 @@ const Logs = () => {
             <button
               ref={firstBtn}
               className="botnAny"
-              disabled={btnState}
               style={{
                 fontWeight: "100",
                 //   border: "1px solid white",
@@ -340,7 +339,6 @@ const Logs = () => {
             <button
               ref={secondBtn}
               className="botnAny showMe"
-              disabled={btnState}
               style={{
                 fontWeight: "100",
               }}
