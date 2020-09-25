@@ -314,14 +314,14 @@ const Logs = () => {
                   iconSize={6}
                   iconType="circle"
                 />
-                <Bar dataKey="Surge" fill="#8884d8" fontSize="10" />
+                <Bar dataKey="Surge" fill="#05BADD" fontSize="10" />
 
-                <Bar dataKey="GTAssistant" fill="#F47560" />
+                <Bar dataKey="GTAssistant" fill="#FF3902" />
 
                 <Bar dataKey="GTCommunity" fill="rgb(251, 255, 0)" />
 
-                <Bar dataKey="TestWrapper" fill="#61CDBB" />
-                <Bar dataKey="LiveWrapper" fill="#E8A838" />
+                <Bar dataKey="TestWrapper" fill="#2B4871" />
+                <Bar dataKey="LiveWrapper" fill="#FFB404" />
               </BarChart>
             </ResponsiveContainer>
           </div>
@@ -367,6 +367,22 @@ const Logs = () => {
           </div>
         </div>
       )}
+
+      {/* BACKGROUND ANIMATION */}
+      <div class="area">
+        <ul class="circles">
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+        </ul>
+      </div>
     </div>
   );
 };
