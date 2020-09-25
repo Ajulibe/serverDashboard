@@ -18,10 +18,10 @@ const Logs = () => {
   const [year, setYear] = useState("");
   const [info, setInfo] = useState({
     Surge: 0,
-    GTAssistant: 10,
-    GTCommunity: 10,
-    LiveWrapper: 10,
-    TestWrapper: 10,
+    GTAssistant: 0,
+    GTCommunity: 0,
+    LiveWrapper: 0,
+    TestWrapper: 0,
   });
   const [content, setContent] = useState("");
 
@@ -84,7 +84,7 @@ const Logs = () => {
 
   const fetchAnalysis = async () => {
     setEmpty(false);
-    // console.log(months, year);
+    console.log(months, year);
     const response = await axios.post(
       "https://auto-response-mail-backend.herokuapp.com/analytics",
       {
@@ -93,7 +93,7 @@ const Logs = () => {
       }
     );
 
-    console.log(response.data.mainData);
+    console.log(response.data);
     const Servers = response.data.serverDownCount;
     const mainData = response.data.mainData;
     const row = mainData.map((data) => {
@@ -132,6 +132,9 @@ const Logs = () => {
       LiveWrapper: Servers.LiveWrapper ? Servers.LiveWrapper : "0",
       TestWrapper: Servers.TestWrapper ? Servers.TestWrapper : "0",
     });
+
+    setMonths("");
+    setYear("");
   };
 
   const addClassFn = () => {
@@ -145,7 +148,7 @@ const Logs = () => {
   };
 
   return (
-    <div className="container" style={{ fontSize: "1rem" }}>
+    <div className="container divMan">
       <div
         className="row d-flex align-items-center justify-content-center text-center"
         style={{
@@ -157,6 +160,7 @@ const Logs = () => {
           style={{
             backgroundColor: "#1D2022",
             border: "0.3px solid rgb(255, 117, 37)",
+            // border: "0.3px solid rgb(224, 248, 11)",
             padding: "0.6rem",
             // boxShadow: "0px 0px 6px 3px rgba(0, 0, 0, 0.3)",
             // borderRadius: "3px",
@@ -170,6 +174,7 @@ const Logs = () => {
                 border: "none",
                 backgroundColor: "#14171A",
                 color: "white",
+                fontSize: "0.7rem",
               }}
               value={months}
               onChange={optionsMonthsChange}
@@ -198,6 +203,7 @@ const Logs = () => {
                 borderRadius: "0",
                 backgroundColor: "#14171A",
                 color: "white",
+                fontSize: "0.7rem",
               }}
               value={year}
               onChange={optionsYearChange}
@@ -274,7 +280,7 @@ const Logs = () => {
               //   paddingLeft: "1rem",
               //   paddingBottom: "2rem",
               height: "20rem",
-              border: "1px solid rgb(255, 117, 37)",
+              border: "1px solid rgba(225, 0, 0, 0.8)",
             }}
           >
             <ResponsiveContainer width="100%" height="80%">
@@ -303,7 +309,7 @@ const Logs = () => {
                 <Legend
                   verticalAlign="bottom"
                   height={5}
-                  iconSize="6"
+                  iconSize={6}
                   iconType="circle"
                 />
                 <Bar dataKey="Surge" fill="#8884d8" fontSize="10" />
@@ -329,7 +335,7 @@ const Logs = () => {
               }}
               onClick={addClassFn}
             >
-              <span>Show Table</span>
+              <span>Show Details</span>
             </button>
             <button
               ref={secondBtn}
@@ -340,14 +346,14 @@ const Logs = () => {
               }}
               onClick={addClassFn}
             >
-              <span>Hide Table</span>
+              <span>Hide Details</span>
             </button>
           </div>
 
           {/* TABLE */}
           <div className="col-md-7 col-11 mt-3 showMe" ref={addBtn}>
-            <div class="table-responsive">
-              <table class="table table-striped table-bordered table-hover table-sm text-center">
+            <div className="table-responsive">
+              <table className="table table-striped table-bordered table-hover table-sm text-center">
                 <thead>
                   <tr>
                     <th scope="col">Server</th>

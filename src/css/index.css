@@ -210,6 +210,11 @@ html {
 /* //MEDIA QUERIES */
 
 @media only screen and (max-width: 375px) {
+  /* NEW */
+  .divMan {
+    font-size: 0.5rem !important;
+  }
+
   .header {
     font-size: 80%;
   }
@@ -298,6 +303,10 @@ html {
   .botnAny {
     font-size: 0.4rem !important;
   }
+  .divMan {
+    font-size: 0.5rem !important;
+  }
+
   .botn3 {
     width: 0.4rem;
     height: 0.4rem;
@@ -374,6 +383,9 @@ html {
   /* NEW */
   .reduceMe {
     font-size: 0.6rem;
+  }
+  .divMan {
+    font-size: 0.5rem;
   }
 
   body {
@@ -454,6 +466,7 @@ html {
 .form-control-sm:focus {
   outline: none !important;
   border: none !important;
+  box-shadow: none !important;
 }
 
 .cardsBlack2 {
@@ -520,7 +533,7 @@ html {
 .table-sm td,
 .table-bordered th,
 .table-bordered th {
-  border: 1px solid rgb(255, 117, 37) !important;
+  border: 1px solid rgb(69, 132, 6) !important;
   color: white;
   font-size: small;
 }
@@ -531,4 +544,8 @@ html {
 
 .showMe {
   display: none;
+}
+
+.divMan {
+  font-size: 0.7rem;
 }
