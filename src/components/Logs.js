@@ -17,11 +17,11 @@ const Logs = () => {
   const [months, setMonths] = useState("");
   const [year, setYear] = useState("");
   const [info, setInfo] = useState({
-    Surge: 0,
-    GTAssistant: 0,
-    GTCommunity: 0,
-    LiveWrapper: 0,
-    TestWrapper: 0,
+    Surge: 10,
+    GTAssistant: 10,
+    GTCommunity: 10,
+    LiveWrapper: 10,
+    TestWrapper: 10,
   });
   const [content, setContent] = useState("");
 

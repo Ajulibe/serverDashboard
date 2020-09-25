@@ -26,7 +26,8 @@ html {
 }
 
 .gtlogo {
-  width: 5rem;
+  width: 4rem;
+  height: 4rem;
 }
 
 .header {
@@ -114,6 +115,23 @@ html {
   font-size: 0.6rem;
 }
 .botn:hover {
+  transform: scale(1.1);
+}
+
+/* NEW */
+.botnAny1 {
+  background: linear-gradient(
+    to right bottom,
+    rgb(255, 117, 37),
+    rgb(217, 79, 0)
+  );
+  border: none;
+  color: white;
+  border-radius: 0;
+  transition: all 0.2s;
+  font-size: 0.6rem;
+}
+.botnAny1:hover {
   transform: scale(1.1);
 }
 
@@ -269,6 +287,9 @@ html {
   .botnAny {
     font-size: 0.5rem !important;
   }
+  .botnAny1 {
+    font-size: 0.5rem !important;
+  }
 }
 
 @media only screen and (max-width: 320px) {
@@ -301,6 +322,9 @@ html {
 
   /* NEW */
   .botnAny {
+    font-size: 0.4rem !important;
+  }
+  .botnAny1 {
     font-size: 0.4rem !important;
   }
   .divMan {

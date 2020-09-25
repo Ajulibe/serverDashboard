@@ -90,12 +90,12 @@ function App() {
             </p>
             <Link to="/view-logs">
               <button
-                className="botn"
+                className="botnAny1"
                 style={{
                   fontWeight: "100",
                 }}
               >
-                <span className="sendadd">
+                <span>
                   View Logs &nbsp; <i class="fa fa-cogs" aria-hidden="true"></i>
                 </span>
               </button>
