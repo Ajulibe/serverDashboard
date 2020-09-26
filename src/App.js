@@ -77,12 +77,12 @@ function App() {
           className="row d-flex no=gutters headBoy"
           style={{ marginTop: "1%" }}
         >
-          <div className="col-md-4" style={{ textAlign: "center" }}></div>
+          <div className="col-md-4 " style={{ textAlign: "center" }}></div>
           <div
             className="col-10 pl-5 pl-md-0 col-md-4"
             style={{ textAlign: "center" }}
           >
-            <p className="header" style={{}}>
+            <p className="header" style={{ textAlign: "center" }}>
               <b>Fintech & Innovation Division</b>
             </p>
             <p
@@ -105,7 +105,19 @@ function App() {
             </Link>
           </div>
           <div className="col-2 col-md-4 d-flex justify-content-end">
-            <img src={GtLogo} alt="gtlogo" className="gtlogo" />
+            <div className="row">
+              <div className="col-12">
+                <img src={GtLogo} alt="gtlogo" className="gtlogo" />
+              </div>
+              {/* <img src={GtLogo} alt="gtlogo" className="gtlogo" /> */}
+              {/* custom toogle switch */}
+              {/* <div className="col-12">
+                <label class="switch">
+                  <input type="checkbox" />
+                  <span class="slider round"></span>
+                </label>
+              </div> */}
+            </div>
           </div>
         </div>
 
