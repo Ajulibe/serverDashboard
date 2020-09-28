@@ -639,6 +639,14 @@ html {
     margin-top: 7% !important;
   }
 
+  .divMan {
+    margin-top: 5%;
+  }
+
+  .graph {
+    margin-top: 5% !important;
+  }
+
   .floatingIcon {
     margin-top: 15% !important
   }
@@ -646,6 +654,10 @@ html {
   .reduceMe {
     font-size: 2rem;
     margin-top: 20% !important
+  }
+
+  .shiftBtn {
+    margin-top: 5%
   }
 }
 

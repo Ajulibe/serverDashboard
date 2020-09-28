@@ -240,7 +240,7 @@ const Logs = () => {
           }}
         >
           <button
-            className="botnAny "
+            className="botnAny shiftBtn"
             disabled={btnState}
             style={{
               fontWeight: "100",
@@ -279,7 +279,7 @@ const Logs = () => {
         </div>
       ) : null}
       {showDiv ? (
-        <div className="row d-flex align-items-center justify-content-center mt-3">
+        <div className="row d-flex align-items-center justify-content-center mt-3 graph">
           <div
             className="col-md-7 col-10 d-flex align-items-center justify-content-center text-center"
             style={{
@@ -344,7 +344,7 @@ const Logs = () => {
           <div className="col-8 text-center mt-3">
             <button
               ref={firstBtn}
-              className="botnAny"
+              className="botnAny shiftBtn"
               style={{
                 fontWeight: "100",
                 //   border: "1px solid white",
@@ -355,7 +355,7 @@ const Logs = () => {
             </button>
             <button
               ref={secondBtn}
-              className="botnAny showMe"
+              className="botnAny showMe shiftBtn"
               style={{
                 fontWeight: "100",
               }}
@@ -365,7 +365,7 @@ const Logs = () => {
             </button>
           </div>
           {/* TABLE */}
-          <div className="col-md-7 col-11 mt-3 showMe" ref={addBtn}>
+          <div className="col-md-7 col-11 mt-3 showMe graph" ref={addBtn}>
             <div className="table-responsive">
               <table className="table table-striped table-bordered table-hover table-sm text-center">
                 <thead>
