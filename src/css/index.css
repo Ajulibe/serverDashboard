@@ -639,15 +639,25 @@ html {
     margin-top: 7% !important;
   }
 
-  /* .floatingIcon {
-    margin-top: 40%
-  } */
+  .floatingIcon {
+    margin-top: 15% !important
+  }
+
+  .reduceMe {
+    font-size: 2rem;
+    margin-top: 20% !important
+  }
 }
 
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 1024px) {
 
   .floatingIcon {
+    margin-top: 15% !important
+  }
+
+  .reduceMe {
+    font-size: 1.5rem;
     margin-top: 20% !important
   }
 }
@@ -657,12 +667,25 @@ html {
   .floatingIcon {
     margin-top: 10% !important
   }
+
+  .reduceMe {
+    font-size: 1rem;
+    margin-top: 15% !important
+  }
 }
 
 @media only screen and (max-width: 320px) {
 
   .floatingIcon {
     margin-top: 4% !important
+  }
+
+  .hideSearch {
+    display: none
+  }
+
+  .search {
+    text-align: center !important;
   }
 }
 
@@ -677,6 +700,14 @@ html {
 
   .floatingIcon {
     margin-top: 4% !important
+  }
+}
+
+@media only screen and (max-width: 414px) {
+
+  .reduceMe {
+    font-size: 1rem;
+    margin-top: 15% !important
   }
 }
 

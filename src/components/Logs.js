@@ -240,7 +240,7 @@ const Logs = () => {
           }}
         >
           <button
-            className="botnAny"
+            className="botnAny "
             disabled={btnState}
             style={{
               fontWeight: "100",
@@ -248,7 +248,7 @@ const Logs = () => {
             }}
             onClick={fetchAnalysis}
           >
-            <span>
+            <span className="search">
               Search &nbsp;{" "}
               <i className="fa fa-search hideSearch" aria-hidden="true"></i>
             </span>
@@ -299,13 +299,11 @@ const Logs = () => {
                   height: "20rem",
                 }}
               >
-                <ResponsiveContainer width="100%" height="80%">
+                <ResponsiveContainer width="90%" height="80%">
                   <BarChart
                     data={data}
                     margin={{
                       top: 0,
-                      //   right: 10,
-                      //   left: 10,
                       bottom: 30,
                     }}
                   >
@@ -319,7 +317,7 @@ const Logs = () => {
                         position: "insideBottomLeft",
                         fill: "white",
                         fontSize: 10,
-                        offset: 13,
+                        offset: 16,
                       }}
                     />
                     <Tooltip />
