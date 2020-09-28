@@ -57,11 +57,11 @@ const Logs = () => {
     },
     {
       name: "LiveWrapper",
-      LiveWrapper: info.LiveWrapper,
+      LiveWrapper: info.Livewrapper,
     },
     {
       name: "TestWrapper",
-      TestWrapper: info.TestWrapper,
+      TestWrapper: info.Testwrapper,
     },
   ];
 
@@ -130,8 +130,8 @@ const Logs = () => {
       Surge: Servers.Surge ? Servers.Surge : "0",
       GTAssistant: Servers.GTAssistant ? Servers.GTAssistant : "0",
       GTCommunity: Servers.GTCommunity ? Servers.GTCommunity : "0",
-      LiveWrapper: Servers.LiveWrapper ? Servers.LiveWrapper : "0",
-      TestWrapper: Servers.TestWrapper ? Servers.TestWrapper : "0",
+      LiveWrapper: Servers.Livewrapper ? Servers.Livewrapper : "0",
+      TestWrapper: Servers.Testwrapper ? Servers.Testwrapper : "0",
     });
 
     setMonths("");
