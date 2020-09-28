@@ -41,6 +41,7 @@ html {
     opacity: 0;
     transform: translateY(-10rem);
   }
+
   100% {
     opacity: 1;
     transform: translateY(0);
@@ -78,6 +79,7 @@ html {
   0% {
     background-color: transparent;
   }
+
   100% {
     background-color: rgba(162, 7, 7, 0.8);
   }
@@ -87,6 +89,7 @@ html {
   0% {
     background-color: transparent;
   }
+
   100% {
     background-color: rgb(85, 137, 7);
   }
@@ -103,34 +106,32 @@ html {
 }
 
 .botn {
-  background: linear-gradient(
-    to right bottom,
-    rgb(255, 117, 37),
-    rgb(217, 79, 0)
-  );
+  background: linear-gradient(to right bottom,
+      rgb(255, 117, 37),
+      rgb(217, 79, 0));
   border: none;
   color: white;
   border-radius: 0;
   transition: all 0.2s;
   font-size: 0.6rem;
 }
+
 .botn:hover {
   transform: scale(1.1);
 }
 
 /* NEW */
 .botnAny1 {
-  background: linear-gradient(
-    to right bottom,
-    rgb(255, 117, 37),
-    rgb(217, 79, 0)
-  );
+  background: linear-gradient(to right bottom,
+      rgb(255, 117, 37),
+      rgb(217, 79, 0));
   border: none;
   color: white;
   border-radius: 0;
   transition: all 0.2s;
   font-size: 0.6rem;
 }
+
 .botnAny1:hover {
   transform: scale(1.1);
 }
@@ -142,6 +143,7 @@ html {
   border-radius: 5px;
   transition: all 0.2s;
 }
+
 .botn1:hover {
   cursor: default;
 }
@@ -154,6 +156,7 @@ html {
   0% {
     opacity: 0;
   }
+
   100% {
     opacity: 100;
   }
@@ -176,9 +179,11 @@ html {
   0% {
     background-color: transparent;
   }
+
   50% {
     background-color: rgba(180, 10, 10, 0.8);
   }
+
   100% {
     background-color: rgba(225, 0, 0, 0.8);
   }
@@ -191,6 +196,7 @@ html {
   border: none;
   border-radius: 1rem;
 }
+
 .botn5 {
   background: linear-gradient(to bottom, rgb(251, 255, 0), rgb(224, 248, 11));
   width: 1rem;
@@ -200,11 +206,9 @@ html {
 }
 
 .mainAdmin {
-  background: linear-gradient(
-    to right bottom,
-    rgb(250, 98, 10),
-    rgb(217, 79, 0)
-  );
+  background: linear-gradient(to right bottom,
+      rgb(250, 98, 10),
+      rgb(217, 79, 0));
 }
 
 .transNum {
@@ -228,6 +232,7 @@ html {
 /* //MEDIA QUERIES */
 
 @media only screen and (max-width: 375px) {
+
   /* NEW */
   .divMan {
     font-size: 0.5rem !important;
@@ -236,6 +241,7 @@ html {
   .header {
     font-size: 80%;
   }
+
   .gtlogo {
     width: 3rem;
     height: 3rem;
@@ -244,6 +250,7 @@ html {
   body {
     margin-top: 1rem;
   }
+
   .internal {
     font-size: 0.7rem !important;
   }
@@ -251,34 +258,44 @@ html {
   .adminStyle {
     font-size: 1rem !important;
   }
+
   .stayup {
     font-size: 0.5rem !important;
   }
+
   .conImage {
     max-width: 7rem;
     height: 4rem;
   }
+
   .circleStyle {
     width: 6rem;
   }
+
   .transNum2 {
     font-size: 1rem !important;
   }
+
   .transNum {
     font-size: 1rem !important;
   }
+
   .allservers {
     font-size: 0.8rem !important;
   }
+
   .alitbtn {
     font-size: 0.5rem !important;
   }
+
   .ipadd {
     display: none;
   }
+
   .sendadd {
     display: none;
   }
+
   .botn {
     font-size: 0.5rem !important;
   }
@@ -287,6 +304,7 @@ html {
   .botnAny {
     font-size: 0.5rem !important;
   }
+
   .botnAny1 {
     font-size: 0.5rem !important;
   }
@@ -302,20 +320,25 @@ html {
     max-width: 5rem;
     height: 3rem;
   }
+
   .circleStyle {
     width: 4rem;
   }
+
   .transNum2 {
     font-size: 0.8rem !important;
     left: 3.9rem;
   }
+
   .transNum {
     font-size: 0.8rem !important;
     left: 3.9rem;
   }
+
   .sendadd {
     display: none;
   }
+
   .botn {
     font-size: 0.4rem !important;
   }
@@ -324,9 +347,11 @@ html {
   .botnAny {
     font-size: 0.4rem !important;
   }
+
   .botnAny1 {
     font-size: 0.4rem !important;
   }
+
   .divMan {
     font-size: 0.5rem !important;
   }
@@ -336,11 +361,13 @@ html {
     height: 0.4rem;
     border-radius: 100%;
   }
+
   .botn4 {
     width: 0.4rem;
     height: 0.4rem;
     border-radius: 100%;
   }
+
   .botn5 {
     width: 0.4rem;
     height: 0.4rem;
@@ -352,6 +379,7 @@ html {
   .header {
     font-size: 80%;
   }
+
   .gtlogo {
     width: 3rem;
     height: 3rem;
@@ -360,6 +388,7 @@ html {
   body {
     margin-top: 1rem;
   }
+
   .internal {
     font-size: 0.7rem !important;
   }
@@ -367,47 +396,58 @@ html {
   .adminStyle {
     font-size: 1rem !important;
   }
+
   .stayup {
     font-size: 0.5rem !important;
   }
+
   .conImage {
     max-width: 7rem;
     height: 4rem;
   }
+
   .circleStyle {
     width: 6rem;
   }
+
   .transNum2 {
     font-size: 1rem !important;
   }
+
   .transNum {
     font-size: 1rem !important;
   }
+
   .allservers {
     font-size: 0.8rem !important;
   }
+
   .alitbtn {
     font-size: 0.5rem !important;
   }
+
   .ipadd {
     display: none;
   }
-  .botn {
-  }
+
+  .botn {}
 }
 
 @media only screen and (max-width: 280px) {
   .header {
     font-size: 60%;
   }
+
   .gtlogo {
     width: 3rem;
     height: 3rem;
   }
+
   /* NEW */
   .reduceMe {
     font-size: 0.6rem;
   }
+
   .divMan {
     font-size: 0.5rem;
   }
@@ -415,6 +455,7 @@ html {
   body {
     margin-top: 1rem;
   }
+
   .internal {
     font-size: 0.5rem !important;
   }
@@ -422,9 +463,11 @@ html {
   .adminStyle {
     font-size: 0.7rem !important;
   }
+
   .stayup {
     font-size: 0.4rem !important;
   }
+
   .conImage {
     max-width: 5rem;
   }
@@ -444,6 +487,7 @@ html {
   .header {
     font-size: 80%;
   }
+
   .gtlogo {
     width: 3rem;
     height: 3rem;
@@ -452,6 +496,7 @@ html {
   body {
     margin-top: 1rem;
   }
+
   .internal {
     font-size: 0.7rem !important;
   }
@@ -459,28 +504,36 @@ html {
   .adminStyle {
     font-size: 1rem !important;
   }
+
   .stayup {
     font-size: 0.5rem !important;
   }
+
   .conImage {
     max-width: 7rem;
     height: 4rem;
   }
+
   .circleStyle {
     width: 6rem;
   }
+
   .transNum2 {
     font-size: 1rem !important;
   }
+
   .transNum {
     font-size: 1rem !important;
   }
+
   .allservers {
     font-size: 0.8rem !important;
   }
+
   .alitbtn {
     font-size: 0.5rem !important;
   }
+
   .ipadd {
     display: none;
   }
@@ -503,17 +556,16 @@ html {
 /* NEW */
 
 .botnAny {
-  background: linear-gradient(
-    to right bottom,
-    rgb(255, 117, 37),
-    rgb(217, 79, 0)
-  );
+  background: linear-gradient(to right bottom,
+      rgb(255, 117, 37),
+      rgb(217, 79, 0));
   border: none;
   color: white;
   border-radius: 0;
   transition: all 0.2s;
   font-size: 0.6rem;
 }
+
 .botnAny:hover {
   transform: scale(1.1);
 }
@@ -539,12 +591,15 @@ html {
   0% {
     transform: rotateZ(8deg) scale(1);
   }
+
   25% {
     transform: rotateZ(-8deg) scale(0.8);
   }
+
   75% {
     transform: rotateZ(0) scale(1);
   }
+
   100% {
     transform: rotateZ(8deg) scale(0.8);
   }
@@ -574,14 +629,58 @@ html {
   font-size: 0.7rem;
 }
 
+
 @media only screen and (min-width: 1367px) {
   .changedr {
     margin-top: 12% !important;
   }
+
   .headBoy {
     margin-top: 7% !important;
   }
+
+  /* .floatingIcon {
+    margin-top: 40%
+  } */
 }
+
+
+@media only screen and (max-width: 768px) {
+
+  .floatingIcon {
+    margin-top: 20% !important
+  }
+}
+
+@media only screen and (max-width: 375px) {
+
+  .floatingIcon {
+    margin-top: 10% !important
+  }
+}
+
+@media only screen and (max-width: 320px) {
+
+  .floatingIcon {
+    margin-top: 4% !important
+  }
+}
+
+@media only screen and (max-width: 360px) {
+
+  .floatingIcon {
+    margin-top: 4% !important
+  }
+}
+
+@media only screen and (max-width: 411px) {
+
+  .floatingIcon {
+    margin-top: 4% !important
+  }
+}
+
+
 
 /* BACKGROUND ANIMATION */
 @import url("https://fonts.googleapis.com/css?family=Exo:400,700");
@@ -705,19 +804,17 @@ html {
   transition: 0.4s;
 }
 
-input:checked + .slider {
-  background: linear-gradient(
-    to right bottom,
-    rgb(255, 117, 37),
-    rgb(217, 79, 0)
-  );
+input:checked+.slider {
+  background: linear-gradient(to right bottom,
+      rgb(255, 117, 37),
+      rgb(217, 79, 0));
 }
 
 /* input:focus + .slider {
   box-shadow: 0 0 1px white;
 } */
 
-input:checked + .slider:before {
+input:checked+.slider:before {
   -webkit-transform: translateX(15px);
   -ms-transform: translateX(15px);
   transform: translateX(15px);
@@ -737,6 +834,7 @@ input:checked + .slider:before {
   0% {
     transform: translateX(0px);
   }
+
   /* 80% {
     transform: translateX(26px);
   }
@@ -747,8 +845,26 @@ input:checked + .slider:before {
     transform: translateX(26px);
   }
 }
+
 /* 
 body.dark-theme {
   background-color: white;
   color: #14171a;
 } */
+
+
+.spinner {
+  margin-top: 15%;
+}
+
+
+@media only screen and (max-width: 414px) {
+  .spinner {
+    margin-top: 30%;
+  }
+
+  .heading {
+    font-size: 0.7rem;
+    color: rgb(255, 117, 37)
+  }
+}
