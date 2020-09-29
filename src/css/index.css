@@ -106,9 +106,11 @@ html {
 }
 
 .botn {
-  background: linear-gradient(to right bottom,
-      rgb(255, 117, 37),
-      rgb(217, 79, 0));
+  background: linear-gradient(
+    to right bottom,
+    rgb(255, 117, 37),
+    rgb(217, 79, 0)
+  );
   border: none;
   color: white;
   border-radius: 0;
@@ -122,9 +124,11 @@ html {
 
 /* NEW */
 .botnAny1 {
-  background: linear-gradient(to right bottom,
-      rgb(255, 117, 37),
-      rgb(217, 79, 0));
+  background: linear-gradient(
+    to right bottom,
+    rgb(255, 117, 37),
+    rgb(217, 79, 0)
+  );
   border: none;
   color: white;
   border-radius: 0;
@@ -206,9 +210,11 @@ html {
 }
 
 .mainAdmin {
-  background: linear-gradient(to right bottom,
-      rgb(250, 98, 10),
-      rgb(217, 79, 0));
+  background: linear-gradient(
+    to right bottom,
+    rgb(250, 98, 10),
+    rgb(217, 79, 0)
+  );
 }
 
 .transNum {
@@ -232,7 +238,6 @@ html {
 /* //MEDIA QUERIES */
 
 @media only screen and (max-width: 375px) {
-
   /* NEW */
   .divMan {
     font-size: 0.5rem !important;
@@ -430,7 +435,8 @@ html {
     display: none;
   }
 
-  .botn {}
+  .botn {
+  }
 }
 
 @media only screen and (max-width: 280px) {
@@ -556,9 +562,11 @@ html {
 /* NEW */
 
 .botnAny {
-  background: linear-gradient(to right bottom,
-      rgb(255, 117, 37),
-      rgb(217, 79, 0));
+  background: linear-gradient(
+    to right bottom,
+    rgb(255, 117, 37),
+    rgb(217, 79, 0)
+  );
   border: none;
   color: white;
   border-radius: 0;
@@ -629,7 +637,6 @@ html {
   font-size: 0.7rem;
 }
 
-
 @media only screen and (min-width: 1367px) {
   .changedr {
     margin-top: 12% !important;
@@ -648,52 +655,48 @@ html {
   }
 
   .floatingIcon {
-    margin-top: 15% !important
+    margin-top: 15% !important;
   }
 
   .reduceMe {
     font-size: 2rem;
-    margin-top: 20% !important
+    margin-top: 20% !important;
   }
 
   .shiftBtn {
-    margin-top: 5%
+    margin-top: 5%;
   }
 }
 
-
 @media only screen and (max-width: 1024px) {
-
   .floatingIcon {
-    margin-top: 15% !important
+    margin-top: 15% !important;
   }
 
   .reduceMe {
     font-size: 1.5rem;
-    margin-top: 20% !important
+    margin-top: 20% !important;
   }
 }
 
 @media only screen and (max-width: 375px) {
-
   .floatingIcon {
-    margin-top: 10% !important
+    margin-top: 10% !important;
   }
 
   .reduceMe {
     font-size: 1rem;
-    margin-top: 15% !important
+    margin-top: 15% !important;
   }
 }
 
 @media only screen and (max-width: 320px) {
-
   .floatingIcon {
-    margin-top: 4% !important
+    margin-top: 4% !important;
   }
 
   .hideSearch {
-    display: none
+    display: none;
   }
 
   .search {
@@ -702,28 +705,23 @@ html {
 }
 
 @media only screen and (max-width: 360px) {
-
   .floatingIcon {
-    margin-top: 4% !important
+    margin-top: 4% !important;
   }
 }
 
 @media only screen and (max-width: 411px) {
-
   .floatingIcon {
-    margin-top: 4% !important
+    margin-top: 4% !important;
   }
 }
 
 @media only screen and (max-width: 414px) {
-
   .reduceMe {
     font-size: 1rem;
-    margin-top: 15% !important
+    margin-top: 15% !important;
   }
 }
-
-
 
 /* BACKGROUND ANIMATION */
 @import url("https://fonts.googleapis.com/css?family=Exo:400,700");
@@ -847,17 +845,19 @@ html {
   transition: 0.4s;
 }
 
-input:checked+.slider {
-  background: linear-gradient(to right bottom,
-      rgb(255, 117, 37),
-      rgb(217, 79, 0));
+input:checked + .slider {
+  background: linear-gradient(
+    to right bottom,
+    rgb(255, 117, 37),
+    rgb(217, 79, 0)
+  );
 }
 
 /* input:focus + .slider {
   box-shadow: 0 0 1px white;
 } */
 
-input:checked+.slider:before {
+input:checked + .slider:before {
   -webkit-transform: translateX(15px);
   -ms-transform: translateX(15px);
   transform: translateX(15px);
@@ -895,11 +895,9 @@ body.dark-theme {
   color: #14171a;
 } */
 
-
 .spinner {
   margin-top: 15%;
 }
-
 
 @media only screen and (max-width: 414px) {
   .spinner {
@@ -908,6 +906,6 @@ body.dark-theme {
 
   .heading {
     font-size: 0.7rem;
-    color: rgb(255, 117, 37)
+    color: rgb(255, 117, 37);
   }
 }
